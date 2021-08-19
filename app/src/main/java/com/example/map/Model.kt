@@ -6,13 +6,29 @@ import com.google.gson.annotations.SerializedName
 class Model(
     @SerializedName("code")
     @Expose
-    private val code: String,
+    private var code: String,
     @SerializedName("message")
     @Expose
-    private val message: String,
+    private var message: String,
     @SerializedName("datetime")
     @Expose
-    private val datetime: String,
+    private var datetime: String
 ) {
-
+   fun setcode(code :String) {
+       this.code= code
+   }
+    fun getcode(): String {
+        return this.code
+    }
+    fun setmess(message :String) {
+        this.message= message
+    }
+    fun getmess(): String {
+        return this.message
+    }fun setdatetime(datetime: String) {
+        this.datetime= datetime
+    }
+    fun getdatetime(): String {
+        return this.datetime
+    }
 }
