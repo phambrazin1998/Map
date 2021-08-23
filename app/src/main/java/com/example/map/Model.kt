@@ -4,31 +4,35 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 class Model(
-    @SerializedName("code")
+    @SerializedName("lat")
     @Expose
-    private var code: String,
-    @SerializedName("message")
+    private var lat: Double,
+    @SerializedName("lng")
     @Expose
-    private var message: String,
-    @SerializedName("datetime")
+    private var lng: Double,
+    @SerializedName("name")
     @Expose
-    private var datetime: String
+    private var name: String
 ) {
-   fun setcode(code :String) {
-       this.code= code
+   fun setlat(lat :Double) {
+       this.lat= lat
    }
-    fun getcode(): String {
-        return this.code
+    fun getlat(): Double {
+        return this.lat
     }
-    fun setmess(message :String) {
-        this.message= message
+
+
+    fun setlng(lng :Double) {
+        this.lng= lng
     }
-    fun getmess(): String {
-        return this.message
-    }fun setdatetime(datetime: String) {
-        this.datetime= datetime
+    fun getlng(): Double {
+        return this.lng
     }
-    fun getdatetime(): String {
-        return this.datetime
+
+    fun setname(name: String) {
+        this.name= name
+    }
+    fun getname(): String {
+        return this.name
     }
 }
