@@ -4,12 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.Spinner
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MyAdapter(val context: Context,val tinhthanh:List<Model>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
+class MyAdapter(val context: Context,val tinhthanh:List<Data>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
          var name : TextView
          init {
@@ -23,7 +21,7 @@ class MyAdapter(val context: Context,val tinhthanh:List<Model>) : RecyclerView.A
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.name.text= tinhthanh[position].getname()
+        holder.name.text= tinhthanh[position].name
     }
 
     override fun getItemCount(): Int {

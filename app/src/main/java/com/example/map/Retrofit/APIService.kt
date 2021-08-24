@@ -1,9 +1,9 @@
 package com.example.map.Retrofit
-import com.example.map.Model
+import com.example.map.Data
 import retrofit2.Call
 import retrofit2.http.GET
-import java.util.ArrayList
-    interface APIService {
+
+interface APIService {
         @GET("main/lsProvide.json")
-        fun getdata(): Call<List<Model>>
+        fun getdata(): Call<List<Data>>
     }
